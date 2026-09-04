@@ -7,6 +7,6 @@ while True:
         edad = int(input("Edad: "))
         break
     except ValueError:
-        print("Ingresa un valor numérico")
-        subprocess("pause")
+        print(Fore.RED + "Ingresa un valor numérico", Style.RESET_ALL)
+        subprocess.run("pause", shell=True)
 print(Fore.GREEN + "Edad registrada:", edad, Style.RESET_ALL)
